@@ -104,4 +104,23 @@ $(document).ready(function() {
             hourrow.addClass("present")
         }
     };
+    $(document).on("click","i",function(event) {
+        event.preventDefault();
+
+        let index = $(this).attr("save-id");
+        let inputId = "#input-"+index;
+        let value = $(inputId).val();
+
+        plntxar[index] = value;
+
+        localStorage.setItem("StorePlans", JSON.stringify(plntxar));
+    })
+
+    $(document).on('change','input', function(event) {
+        event.preventDefault();  
+    
+        let i = $(this).attr('hour-index');
+    
+      });
+
 });
