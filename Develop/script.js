@@ -91,4 +91,17 @@ $(document).ready(function() {
 
         plncont.append(rowdiv);
     };
+
+    function updateRowColor (hourrow, hour) {
+
+        if (hour < nowHour24) {
+            hourrow.addClass("past")
+        }
+        else if (hour > nowHour24) {
+            hourrow.addClass("future")
+        }
+        else {
+            hourrow.addClass("present")
+        }
+    };
 });
