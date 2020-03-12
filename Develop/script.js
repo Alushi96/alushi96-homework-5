@@ -123,4 +123,12 @@ $(document).ready(function() {
     
       });
 
+      $(document).ready(function(){
+        $("i").hover(function(){
+          $(this).css("background-color", "black");
+          }, function(){
+          $(this).css("background-color", "darkturquoise");
+        });
+      });
+
 });
